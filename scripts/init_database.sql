@@ -16,9 +16,9 @@ WARNING:
 USE master;
 GO
 --drop and recieve the 'datawarehouse' database
-IF EXISTS (SELECT 1 FROM sys.databases WHERE name = 'DataWareHouse'
+IF EXISTS (SELECT 1 FROM sys.databases WHERE name = 'DataWarehouse'
 BEGIN
-  ALTER DATABASE DataWareHouse SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
+  ALTER DATABASE DataWarehouse SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
 END;
 GO
 
