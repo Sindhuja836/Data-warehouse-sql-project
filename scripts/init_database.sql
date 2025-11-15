@@ -15,20 +15,20 @@ WARNING:
 */
 USE master;
 GO
-_ _ drop and recieve the 'datawarehouse' database
+--drop and recieve the 'datawarehouse' database
 IF EXISTS (SELECT 1 FROM sys.databases WHERE name = 'DataWareHouse'
 BEGIN
   ALTER DATABASE DataWareHouse SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
 END;
 GO
 
-_ _ create the 'datawarehouse' database
+--create the 'datawarehouse' database
 CREATE DATABASE DataWarehouse;
 GO
 
 USE DataWarehouse;
 GO
-_ _ create schemas;
+-- create schemas;
 CREATE SCHEMA bronze;
 GO
 CREATE SCHEMA silver;
